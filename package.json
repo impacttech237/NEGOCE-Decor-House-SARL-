@@ -1,0 +1,13 @@
+{
+  "name": "negoce-decor-house-sarl",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Vitrine NEGOCE Decor House SARL — pierres décoratives, Reenoma-inspired",
+  "scripts": {
+    "dev": "python3 -m http.server 5173 --bind 0.0.0.0",
+    "build": "node scripts/build.js",
+    "preview": "python3 -m http.server 4173 --bind 0.0.0.0 --directory dist",
+    "check": "node scripts/check.js"
+  }
+}
