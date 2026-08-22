@@ -1,0 +1,6 @@
+{
+  "name": "NEGOCE Decor House SARL",
+  "description": "Vente de pierres décoratives nobles, parements naturels et dallages haut de gamme pour particuliers et professionnels.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

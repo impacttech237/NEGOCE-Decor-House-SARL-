@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Barlow Condensed', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --color-bg-light: #F5F2EB;
+    --color-card-light: #EBE6DC;
+    --color-dark: #111111;
+    --color-accent: #D84328;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F5F2EB;
+    color: #141414;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    text-transform: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.hero-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+img {
+  transition: filter .45s ease, transform .7s cubic-bezier(.22, 1, .36, 1);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(216, 67, 40, .55);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+@keyframes review-scroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(calc(-50% - 10px)); }
+}
+
+.review-marquee {
+  animation: review-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.review-marquee-reverse {
+  animation-direction: reverse;
+  animation-duration: 34s;
+}
+
+.review-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .review-marquee { animation: none; }
+}
+
+.font-oswald {
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.font-sans {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-display {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.font-display em {
+  font-style: normal;
+  font-weight: 800;
+}
+
+/* Accent highlight styling like Fabrecor */
+.text-accent {
+  color: #D84328;
+}
+
+.bg-accent {
+  background-color: #D84328;
+}
+
+/* Custom subtle grain & dot pattern */
+.industrial-grid {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.industrial-grid-dark {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F5F2EB;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5CFC2;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D84328;
+}
