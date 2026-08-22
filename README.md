@@ -1,20 +1,21 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# NEGOCE Decor House SARL
 
-# Run and deploy your AI Studio app
+Site vitrine de NEGOCE Decor House SARL — pierres de parement, façades et aménagements extérieurs.
 
-This contains everything you need to run your app locally.
+## Stack
 
-View your app in AI Studio: https://ai.studio/apps/d0733938-35ef-4a24-940b-3e918a87306a
+- React 19 + Vite 6 + TypeScript
+- Tailwind CSS 4
+- GSAP / Motion pour les animations
 
-## Run Locally
+## Développement local
 
-**Prerequisites:**  Node.js
+**Prérequis :** Node.js
 
-
-1. Install dependencies:
+1. Installer les dépendances :
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+2. (Optionnel) Définir `GEMINI_API_KEY` dans `.env.local` si les fonctionnalités IA sont utilisées
+3. Lancer le serveur de dev :
    `npm run dev`
+4. Build de production :
+   `npm run build`
